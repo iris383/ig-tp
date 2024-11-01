@@ -1,24 +1,30 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: lightpink;
+    background-color:#fdcae1 ; 
     color: black;
-    line-height: 1.6;
+    line-height: 1.6; 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    position:relative;
 }
 
+h2{
+    font-size: 36px;
+    text-align: center;
+}
+
+    
 nav {
-    background-color:lightpink;
+    background-color: #fdcae1;
     padding: 20px 5%;
     position: sticky;
-    top: 0;
+    top:0;
     z-index: 100;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
+   
 }
 
 .logo {
@@ -30,6 +36,8 @@ nav {
     list-style: none;
     display: flex;
     justify-content: flex-end;
+    width: 50%;
+    justify-content: space-between;
 }
 
 .lista-navegador li {
@@ -47,39 +55,91 @@ nav {
 .hero{
     width: 100%;
 }
-#sobremi{
+
+#sobremi, #experiencia, #contactos,  #logos {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    margin-top: 10%;
 }
-.contenido{
+
+.contenido, .conten-conocim{
     display:flex ;
-    justify-content: space-between;
-
+    justify-content: center;
+   
 }
-.sm-hero{
-    padding-top: 30px;
+ #mis-conocimientos, #proyectos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10%;
+ }
+
+/*Comentamos esto para normalizar el tamaño de las dos imagenes chicas y pegadas*/
+
+.img-rcp img{
+    padding-top: 10%;
+    width: 500px;
+
+} 
+
+.iconos div{
+    display: flex;
+    flex-direction: column;
     text-align: center;
-}
+ }
+ .iconos, .icon img p{
+    font-size: 30px ;
+    justify-content: center;
+    margin: auto;
+   
 
-.sm-hero h2{
-    padding: 30px;
+ }
+.sm-hero{
+    padding-top: 10%;
+    text-align: center;
+
 }
 .img-sm img{
-    width: 100%;
+    width: 500px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 2px 2px 2px grey;
+
 
 }
 
 
+/*Dejamos estos comentarios para que los iconos no esten separados de arriba y abajo*/
 
+.iconos, .icon{
+    display: flex;
+    flex-direction: row; 
+    /* margin-top: 50px; */
+    /* margin: 30%; */
+    padding: 20px;
+    /* margin-bottom: 30%; */
+    width: 100px;
+}
+.conte-proyect, .conte-experienc{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20%;
+}
+.logos, .conte-logo {
+    color: white ;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+     }
 
 form{
     width: 400px;
-    background-color: hsl(325, 100%, 50%);
+    background-color: #dd63ff;
     margin:auto;
     padding:30px;
     margin-top: 100px;
@@ -102,14 +162,147 @@ form{
     border:1px solid black;
     font-size: 16px;
 }    
-
-
-
-
-
 #boton{
     width: 100%;
     padding: auto;
     margin: 16px 0;
     font-size: 16px;
 }
+
+footer {
+    text-align: center;
+    padding: auto;
+    background-color:pink;
+    color: black;
+    border-top: 1px solid #f0f0f0;
+    
+   
+}
+.nav-links, li, a{
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* max-width : tamaño maximo el cual se aplicaran/reemplazaran por estos estilos superponiendose a los demas */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav {
+        padding: 10px 2%;
+    }
+
+    .lista-navegador {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-navegador li {
+        margin: 5px 0;
+    }
+
+    .contenido, .conte-proyect, .conte-experienc {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .sm-hero p {
+        font-size: 14px;
+    }
+
+    .hero, .img-sm img, .img-rcp img {
+        width: 100%;
+        height: auto;
+    }
+
+    .iconos, .icon {
+        flex-direction: column;
+        align-items: center;
+        margin: 10%;
+    }
+
+    .img-exp{
+        width: 90%;
+    }
+
+    form {
+        width: 90%;
+        margin: 20px auto;
+        
+    }
+    .cajas1, .caja2, .caja3{
+        padding-right: 40px;
+
+    }
+    .texto, #boton {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-navegador{
+        display: block;
+        width: auto;
+    }
+}
+
+
+@media (min-width: 321px) {
+    
+    h2 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .contenido .conte-conocim, .conte-conocim .conte-experienc {
+        width: 45%; /* Adjust width for larger screens */
+        padding: var(--spacing-medium); /* Adjust padding for larger screens */
+    }
+
+    .img-principal {
+        width: 150px; /* Set a specific width for larger screens */
+        margin-bottom: var(--spacing-large);
+        box-shadow: var(--box-shadow-large);
+    }
+
+    .lista-navegador {
+        flex-direction: row; /* Go back to row for larger screens */
+        align-items: flex-start; /* Adjust alignment */
+    }
+
+    .lista-navegador li {
+        margin: 0 var(--spacing-medium); /* Adjust margin for larger screens */
+    }
+
+    .sm-hero, .conte-conocim {
+        flex-direction: row; /* Row layout for larger screens */
+    }
+
+    
+}
+
